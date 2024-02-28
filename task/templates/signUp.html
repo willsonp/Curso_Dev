@@ -8,11 +8,11 @@
 <body>
     <H1>SignUp</H1>    
     {% if messages %}
-        <ul>
+        
             {% for message in messages %}
-                <li>{{ message }}</li>
+                <p>{{ message }}</p>
             {% endfor %}
-        </ul>
+        
     {% endif %}
 
     <form action="/signup/" method="POST">

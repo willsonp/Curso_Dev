@@ -8,11 +8,11 @@
 <body>
     <h1>Home</h1>
     {% if messages %}
-        <ul>
+        
             {% for message in messages %}
-                <li>{{ message }}</li>
+                <p>{{ message }}</p>
             {% endfor %}
-        </ul>
+        
     {% endif %}
 </body>
 </html>
