@@ -7,6 +7,13 @@
 </head>
 <body>
     <H1>SignUp</H1>    
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 
     <form action="/signup/" method="POST">
         {% csrf_token %}
