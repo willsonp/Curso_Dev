@@ -17,17 +17,17 @@ def signup(request):
                 user = User.objects.create_user(request.POST['username'], password=request.POST['password1'])
                 user.save()
                 return render(request, "home.html", {
-                    'error': "User created successfully"
+                    'message': "User created successfully"
                 })
             except:
                 return render(request, "signUp.html", {
                     'form': UserCreationForm(),
-                    'error': "Username already exists"
+                    'message': "Username already exists"
                 })                
         else:
             return render(request, "signUp.html", {
                 'form': UserCreationForm(),
-                'error': "Passwords didn't match"
+                'message': "Passwords didn't match"
             
     })
 
